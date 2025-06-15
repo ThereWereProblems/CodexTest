@@ -1,0 +1,8 @@
+<app-upload-form (uploaded)="refresh()"></app-upload-form>
+<ul>
+  <li *ngFor="let file of files">
+    {{ file.filename }} ({{ file.size }} bytes)
+    <button (click)="download(file.id)">Download</button>
+    <button (click)="delete(file.id)">Delete</button>
+  </li>
+</ul>
